@@ -1,0 +1,18 @@
+development:
+  adapter: sqlite3
+  database: db/development.db
+
+test:
+  adapter: sqlite3
+  database: ":memory:"
+  verbosity: silent
+
+production:
+  adapter: mysql
+  database: ygo_production
+  username: ygo
+  password: password
+  socket: <%= ["/tmp/mysqld.sock",
+               "/tmp/mysql.sock",
+               "/var/run/mysqld/mysqld.sock",
+               "/var/lib/mysql/mysql.sock"].detect{|socket| File.exists?(socket) } %>

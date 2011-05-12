@@ -1,0 +1,2 @@
+#!/usr/bin/env ruby
+/var/www/al2o3/ygo/current/script/process/spawner -p 8020 -i 3

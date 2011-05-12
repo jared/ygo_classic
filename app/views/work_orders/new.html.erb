@@ -1,0 +1,15 @@
+<% title "Your Garage Online &raquo; #{@car.name}" %>
+
+<% content_for :errors do %>
+	<%= error_messages_for :work_order %>
+<% end %>
+
+<% form_for :work_order, :url => car_work_orders_url(@car), :html => { :id => 'repair_form' } do |f| %>
+
+	<%= render :partial => "form", :locals => { :f => f } %>
+
+	<div id="form_body">
+		
+	</div>
+	<p class="right"><%= image_submit_tag "buttons/work_orders/continue.gif" %></p>
+<% end %>

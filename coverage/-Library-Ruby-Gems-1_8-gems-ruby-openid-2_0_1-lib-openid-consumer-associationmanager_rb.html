@@ -1,0 +1,948 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang='en' xml:lang='en' xmlns='http://www.w3.org/1999/xhtml'><head><title>/Library/Ruby/Gems/1.8/gems/ruby-openid-2.0.1/lib/openid/consumer/associationmanager.rb - C0 code coverage information</title>
+    <style type='text/css'>body { background-color: rgb(240, 240, 245); }</style>
+    <style type='text/css'>span.cross-ref-title {
+ font-size: 140%;
+}
+span.cross-ref a {
+ text-decoration: none;
+}
+span.cross-ref {
+ background-color:#f3f7fa;
+ border: 1px dashed #333;
+ margin: 1em;
+ padding: 0.5em;
+ overflow: hidden;
+}
+a.crossref-toggle {
+ text-decoration: none;
+}
+span.marked0 {
+ background-color: rgb(185, 210, 200);
+ display: block;
+}
+span.marked1 {
+ background-color: rgb(190, 215, 205);
+ display: block;
+}
+span.inferred0 {
+ background-color: rgb(175, 200, 200);
+ display: block;
+}
+span.inferred1 {
+ background-color: rgb(180, 205, 205);
+ display: block;
+}
+span.uncovered0 {
+ background-color: rgb(225, 110, 110);
+ display: block;
+}
+span.uncovered1 {
+ background-color: rgb(235, 120, 120);
+ display: block;
+}
+span.overview {
+ border-bottom: 8px solid black;
+}
+div.overview {
+ border-bottom: 8px solid black;
+}
+body {
+ font-family: verdana, arial, helvetica;
+}
+div.footer {
+ font-size: 68%;
+ margin-top: 1.5em;
+}
+h1, h2, h3, h4, h5, h6 {
+ margin-bottom: 0.5em;
+}
+h5 {
+ margin-top: 0.5em;
+}
+.hidden {
+ display: none;
+}
+div.separator {
+ height: 10px;
+}
+/* Commented out for better readability, esp. on IE */
+/*
+table tr td, table tr th {
+ font-size: 68%;
+}
+td.value table tr td {
+ font-size: 11px;
+}
+*/
+table.percent_graph {
+ height: 12px;
+ border: #808080 1px solid;
+ empty-cells: show;
+}
+table.percent_graph td.covered {
+ height: 10px;
+ background: #00f000;
+}
+table.percent_graph td.uncovered {
+ height: 10px;
+ background: #e00000;
+}
+table.percent_graph td.NA {
+ height: 10px;
+ background: #eaeaea;
+}
+table.report {
+ border-collapse: collapse;
+ width: 100%;
+}
+table.report td.heading {
+ background: #dcecff;
+ border: #d0d0d0 1px solid;
+ font-weight: bold;
+ text-align: center;
+}
+table.report td.heading:hover {
+ background: #c0ffc0;
+}
+table.report td.text {
+ border: #d0d0d0 1px solid;
+}
+table.report td.value,
+table.report td.lines_total,
+table.report td.lines_code {
+ text-align: right;
+ border: #d0d0d0 1px solid;
+}
+table.report tr.light {
+ background-color: rgb(240, 240, 245);
+}
+table.report tr.dark {
+ background-color: rgb(230, 230, 235);
+}
+</style>
+    <script type='text/javascript'>
+// <![CDATA[
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make cross-references hidden by default
+  document.writeln( "<style type=\"text/css\">span.cross-ref { display: none }</style>" )
+  // ]]>
+</script>
+    <style type='text/css'>span.run0 {
+  background-color: rgb(178, 204, 255);
+  display: block;
+}
+span.run1 {
+  background-color: rgb(178, 206, 255);
+  display: block;
+}
+span.run2 {
+  background-color: rgb(178, 209, 255);
+  display: block;
+}
+span.run3 {
+  background-color: rgb(178, 211, 255);
+  display: block;
+}
+span.run4 {
+  background-color: rgb(178, 214, 255);
+  display: block;
+}
+span.run5 {
+  background-color: rgb(178, 218, 255);
+  display: block;
+}
+span.run6 {
+  background-color: rgb(178, 220, 255);
+  display: block;
+}
+span.run7 {
+  background-color: rgb(178, 223, 255);
+  display: block;
+}
+span.run8 {
+  background-color: rgb(178, 225, 255);
+  display: block;
+}
+span.run9 {
+  background-color: rgb(178, 228, 255);
+  display: block;
+}
+span.run10 {
+  background-color: rgb(178, 232, 255);
+  display: block;
+}
+span.run11 {
+  background-color: rgb(178, 234, 255);
+  display: block;
+}
+span.run12 {
+  background-color: rgb(178, 237, 255);
+  display: block;
+}
+span.run13 {
+  background-color: rgb(178, 239, 255);
+  display: block;
+}
+span.run14 {
+  background-color: rgb(178, 242, 255);
+  display: block;
+}
+span.run15 {
+  background-color: rgb(178, 246, 255);
+  display: block;
+}
+span.run16 {
+  background-color: rgb(178, 248, 255);
+  display: block;
+}
+span.run17 {
+  background-color: rgb(178, 251, 255);
+  display: block;
+}
+span.run18 {
+  background-color: rgb(178, 253, 255);
+  display: block;
+}
+span.run19 {
+  background-color: rgb(178, 255, 253);
+  display: block;
+}
+span.run20 {
+  background-color: rgb(178, 255, 249);
+  display: block;
+}
+span.run21 {
+  background-color: rgb(178, 255, 247);
+  display: block;
+}
+span.run22 {
+  background-color: rgb(178, 255, 244);
+  display: block;
+}
+span.run23 {
+  background-color: rgb(178, 255, 242);
+  display: block;
+}
+span.run24 {
+  background-color: rgb(178, 255, 239);
+  display: block;
+}
+span.run25 {
+  background-color: rgb(178, 255, 235);
+  display: block;
+}
+span.run26 {
+  background-color: rgb(178, 255, 233);
+  display: block;
+}
+span.run27 {
+  background-color: rgb(178, 255, 230);
+  display: block;
+}
+span.run28 {
+  background-color: rgb(178, 255, 228);
+  display: block;
+}
+span.run29 {
+  background-color: rgb(178, 255, 225);
+  display: block;
+}
+span.run30 {
+  background-color: rgb(178, 255, 221);
+  display: block;
+}
+span.run31 {
+  background-color: rgb(178, 255, 219);
+  display: block;
+}
+span.run32 {
+  background-color: rgb(178, 255, 216);
+  display: block;
+}
+span.run33 {
+  background-color: rgb(178, 255, 214);
+  display: block;
+}
+span.run34 {
+  background-color: rgb(178, 255, 211);
+  display: block;
+}
+span.run35 {
+  background-color: rgb(178, 255, 207);
+  display: block;
+}
+span.run36 {
+  background-color: rgb(178, 255, 205);
+  display: block;
+}
+span.run37 {
+  background-color: rgb(178, 255, 202);
+  display: block;
+}
+span.run38 {
+  background-color: rgb(178, 255, 200);
+  display: block;
+}
+span.run39 {
+  background-color: rgb(178, 255, 197);
+  display: block;
+}
+span.run40 {
+  background-color: rgb(178, 255, 193);
+  display: block;
+}
+span.run41 {
+  background-color: rgb(178, 255, 191);
+  display: block;
+}
+span.run42 {
+  background-color: rgb(178, 255, 188);
+  display: block;
+}
+span.run43 {
+  background-color: rgb(178, 255, 186);
+  display: block;
+}
+span.run44 {
+  background-color: rgb(178, 255, 183);
+  display: block;
+}
+span.run45 {
+  background-color: rgb(178, 255, 179);
+  display: block;
+}
+span.run46 {
+  background-color: rgb(179, 255, 178);
+  display: block;
+}
+span.run47 {
+  background-color: rgb(182, 255, 178);
+  display: block;
+}
+span.run48 {
+  background-color: rgb(184, 255, 178);
+  display: block;
+}
+span.run49 {
+  background-color: rgb(187, 255, 178);
+  display: block;
+}
+span.run50 {
+  background-color: rgb(191, 255, 178);
+  display: block;
+}
+span.run51 {
+  background-color: rgb(193, 255, 178);
+  display: block;
+}
+span.run52 {
+  background-color: rgb(196, 255, 178);
+  display: block;
+}
+span.run53 {
+  background-color: rgb(198, 255, 178);
+  display: block;
+}
+span.run54 {
+  background-color: rgb(201, 255, 178);
+  display: block;
+}
+span.run55 {
+  background-color: rgb(205, 255, 178);
+  display: block;
+}
+span.run56 {
+  background-color: rgb(207, 255, 178);
+  display: block;
+}
+span.run57 {
+  background-color: rgb(210, 255, 178);
+  display: block;
+}
+span.run58 {
+  background-color: rgb(212, 255, 178);
+  display: block;
+}
+span.run59 {
+  background-color: rgb(215, 255, 178);
+  display: block;
+}
+span.run60 {
+  background-color: rgb(219, 255, 178);
+  display: block;
+}
+span.run61 {
+  background-color: rgb(221, 255, 178);
+  display: block;
+}
+span.run62 {
+  background-color: rgb(224, 255, 178);
+  display: block;
+}
+span.run63 {
+  background-color: rgb(226, 255, 178);
+  display: block;
+}
+span.run64 {
+  background-color: rgb(229, 255, 178);
+  display: block;
+}
+span.run65 {
+  background-color: rgb(233, 255, 178);
+  display: block;
+}
+span.run66 {
+  background-color: rgb(235, 255, 178);
+  display: block;
+}
+span.run67 {
+  background-color: rgb(238, 255, 178);
+  display: block;
+}
+span.run68 {
+  background-color: rgb(240, 255, 178);
+  display: block;
+}
+span.run69 {
+  background-color: rgb(243, 255, 178);
+  display: block;
+}
+span.run70 {
+  background-color: rgb(247, 255, 178);
+  display: block;
+}
+span.run71 {
+  background-color: rgb(249, 255, 178);
+  display: block;
+}
+span.run72 {
+  background-color: rgb(252, 255, 178);
+  display: block;
+}
+span.run73 {
+  background-color: rgb(255, 255, 178);
+  display: block;
+}
+span.run74 {
+  background-color: rgb(255, 252, 178);
+  display: block;
+}
+span.run75 {
+  background-color: rgb(255, 248, 178);
+  display: block;
+}
+span.run76 {
+  background-color: rgb(255, 246, 178);
+  display: block;
+}
+span.run77 {
+  background-color: rgb(255, 243, 178);
+  display: block;
+}
+span.run78 {
+  background-color: rgb(255, 240, 178);
+  display: block;
+}
+span.run79 {
+  background-color: rgb(255, 238, 178);
+  display: block;
+}
+span.run80 {
+  background-color: rgb(255, 234, 178);
+  display: block;
+}
+span.run81 {
+  background-color: rgb(255, 232, 178);
+  display: block;
+}
+span.run82 {
+  background-color: rgb(255, 229, 178);
+  display: block;
+}
+span.run83 {
+  background-color: rgb(255, 226, 178);
+  display: block;
+}
+span.run84 {
+  background-color: rgb(255, 224, 178);
+  display: block;
+}
+span.run85 {
+  background-color: rgb(255, 220, 178);
+  display: block;
+}
+span.run86 {
+  background-color: rgb(255, 218, 178);
+  display: block;
+}
+span.run87 {
+  background-color: rgb(255, 215, 178);
+  display: block;
+}
+span.run88 {
+  background-color: rgb(255, 212, 178);
+  display: block;
+}
+span.run89 {
+  background-color: rgb(255, 210, 178);
+  display: block;
+}
+span.run90 {
+  background-color: rgb(255, 206, 178);
+  display: block;
+}
+span.run91 {
+  background-color: rgb(255, 204, 178);
+  display: block;
+}
+span.run92 {
+  background-color: rgb(255, 201, 178);
+  display: block;
+}
+span.run93 {
+  background-color: rgb(255, 198, 178);
+  display: block;
+}
+span.run94 {
+  background-color: rgb(255, 196, 178);
+  display: block;
+}
+span.run95 {
+  background-color: rgb(255, 192, 178);
+  display: block;
+}
+span.run96 {
+  background-color: rgb(255, 189, 178);
+  display: block;
+}
+span.run97 {
+  background-color: rgb(255, 187, 178);
+  display: block;
+}
+span.run98 {
+  background-color: rgb(255, 184, 178);
+  display: block;
+}
+span.run99 {
+  background-color: rgb(255, 182, 178);
+  display: block;
+}
+span.run100 {
+  background-color: rgb(255, 178, 178);
+  display: block;
+}
+</style>
+    </head>
+  <body><h3>C0 code coverage information</h3>
+    <p>Generated on Sun Jan 06 23:15:41 -0500 2008 with <a href='http://eigenclass.org/hiki/rcov'>rcov 0.8.1.2</a>
+      </p>
+    <hr/>
+    <pre><span class='marked0'>Code reported as executed by Ruby looks like this...
+</span><span class='marked1'>and this: this line is also marked as covered.
+</span><span class='inferred0'>Lines considered as run by rcov, but not reported by Ruby, look like this,
+</span><span class='inferred1'>and this: these lines were inferred by rcov (using simple heuristics).
+</span><span class='uncovered0'>Finally, here&apos;s a line marked as not executed.
+</span></pre>                       
+<table class='report'><thead><tr><td class='heading'>Name</td>
+      <td class='heading'>Total lines</td>
+      <td class='heading'>Lines of code</td>
+      <td class='heading'>Total coverage</td>
+      <td class='heading'>Code coverage</td>
+      </tr>
+    </thead>
+  <tbody><tr class='light'><td><a href='-Library-Ruby-Gems-1_8-gems-ruby-openid-2_0_1-lib-openid-consumer-associationmanager_rb.html'>/Library/Ruby/Gems/1.8/gems/ruby-openid-2.0.1/lib/openid/consumer/associationmanager.rb</a>
+        </td>
+      <td class='lines_total'><tt>338</tt>
+        </td>
+      <td class='lines_code'><tt>228</tt>
+        </td>
+      <td><table cellspacing='0' cellpadding='0' align='right'><tr><td><tt class='coverage_total'>29.3%</tt>
+              &nbsp;</td>
+            <td><table cellspacing='0' class='percent_graph' cellpadding='0' width='100'><tr><td class='covered' width='29'/>
+                  <td class='uncovered' width='71'/>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      <td><table cellspacing='0' cellpadding='0' align='right'><tr><td><tt class='coverage_code'>21.5%</tt>
+              &nbsp;</td>
+            <td><table cellspacing='0' class='percent_graph' cellpadding='0' width='100'><tr><td class='covered' width='21'/>
+                  <td class='uncovered' width='79'/>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+<pre><span class="marked1"><a name="line1"></a>  1 require &quot;openid/dh&quot;
+</span><span class="marked0"><a name="line2"></a>  2 require &quot;openid/util&quot;
+</span><span class="marked1"><a name="line3"></a>  3 require &quot;openid/kvpost&quot;
+</span><span class="marked0"><a name="line4"></a>  4 require &quot;openid/cryptutil&quot;
+</span><span class="marked1"><a name="line5"></a>  5 require &quot;openid/protocolerror&quot;
+</span><span class="marked0"><a name="line6"></a>  6 require &quot;openid/association&quot;
+</span><span class="inferred1"><a name="line7"></a>  7 
+</span><span class="marked0"><a name="line8"></a>  8 module OpenID
+</span><span class="marked1"><a name="line9"></a>  9   class Consumer
+</span><span class="inferred0"><a name="line10"></a> 10 
+</span><span class="inferred1"><a name="line11"></a> 11     # A superclass for implementing Diffie-Hellman association sessions.
+</span><span class="marked0"><a name="line12"></a> 12     class DiffieHellmanSession
+</span><span class="marked1"><a name="line13"></a> 13       class &lt;&lt; self
+</span><span class="marked0"><a name="line14"></a> 14         attr_reader :session_type, :secret_size, :allowed_assoc_types,
+</span><span class="inferred1"><a name="line15"></a> 15           :hashfunc
+</span><span class="inferred0"><a name="line16"></a> 16       end
+</span><span class="inferred1"><a name="line17"></a> 17 
+</span><span class="marked0"><a name="line18"></a> 18       def initialize(dh=nil)
+</span><span class="uncovered1"><a name="line19"></a> 19         if dh.nil?
+</span><span class="uncovered0"><a name="line20"></a> 20           dh = DiffieHellman.from_defaults
+</span><span class="uncovered1"><a name="line21"></a> 21         end
+</span><span class="uncovered0"><a name="line22"></a> 22         @dh = dh
+</span><span class="uncovered1"><a name="line23"></a> 23       end
+</span><span class="inferred0"><a name="line24"></a> 24 
+</span><span class="inferred1"><a name="line25"></a> 25       # Return the query parameters for requesting an association
+</span><span class="inferred0"><a name="line26"></a> 26       # using this Diffie-Hellman association session
+</span><span class="marked1"><a name="line27"></a> 27       def get_request
+</span><span class="uncovered0"><a name="line28"></a> 28         args = {'dh_consumer_public' =&gt; CryptUtil.num_to_base64(@dh.public)}
+</span><span class="uncovered1"><a name="line29"></a> 29         if (!@dh.using_default_values?)
+</span><span class="uncovered0"><a name="line30"></a> 30           args['dh_modulus'] = CryptUtil.num_to_base64(@dh.modulus)
+</span><span class="uncovered1"><a name="line31"></a> 31           args['dh_gen'] = CryptUtil.num_to_base64(@dh.generator)
+</span><span class="uncovered0"><a name="line32"></a> 32         end
+</span><span class="uncovered1"><a name="line33"></a> 33 
+</span><span class="uncovered0"><a name="line34"></a> 34         return args
+</span><span class="uncovered1"><a name="line35"></a> 35       end
+</span><span class="inferred0"><a name="line36"></a> 36 
+</span><span class="inferred1"><a name="line37"></a> 37       # Process the response from a successful association request and
+</span><span class="inferred0"><a name="line38"></a> 38       # return the shared secret for this association
+</span><span class="marked1"><a name="line39"></a> 39       def extract_secret(response)
+</span><span class="uncovered0"><a name="line40"></a> 40         dh_server_public64 = response.get_arg(OPENID_NS, 'dh_server_public',
+</span><span class="uncovered1"><a name="line41"></a> 41                                               NO_DEFAULT)
+</span><span class="uncovered0"><a name="line42"></a> 42         enc_mac_key64 = response.get_arg(OPENID_NS, 'enc_mac_key', NO_DEFAULT)
+</span><span class="uncovered1"><a name="line43"></a> 43         dh_server_public = CryptUtil.base64_to_num(dh_server_public64)
+</span><span class="uncovered0"><a name="line44"></a> 44         enc_mac_key = Util.from_base64(enc_mac_key64)
+</span><span class="uncovered1"><a name="line45"></a> 45         return @dh.xor_secret(self.class.hashfunc,
+</span><span class="uncovered0"><a name="line46"></a> 46                               dh_server_public, enc_mac_key)
+</span><span class="uncovered1"><a name="line47"></a> 47       end
+</span><span class="uncovered0"><a name="line48"></a> 48     end
+</span><span class="inferred1"><a name="line49"></a> 49 
+</span><span class="inferred0"><a name="line50"></a> 50     # A Diffie-Hellman association session that uses SHA1 as its hash
+</span><span class="inferred1"><a name="line51"></a> 51     # function
+</span><span class="marked0"><a name="line52"></a> 52     class DiffieHellmanSHA1Session &lt; DiffieHellmanSession
+</span><span class="marked1"><a name="line53"></a> 53       @session_type = 'DH-SHA1'
+</span><span class="marked0"><a name="line54"></a> 54       @secret_size = 20
+</span><span class="marked1"><a name="line55"></a> 55       @allowed_assoc_types = ['HMAC-SHA1']
+</span><span class="marked0"><a name="line56"></a> 56       @hashfunc = CryptUtil.method(:sha1)
+</span><span class="inferred1"><a name="line57"></a> 57     end
+</span><span class="inferred0"><a name="line58"></a> 58 
+</span><span class="inferred1"><a name="line59"></a> 59     # A Diffie-Hellman association session that uses SHA256 as its hash
+</span><span class="inferred0"><a name="line60"></a> 60     # function
+</span><span class="marked1"><a name="line61"></a> 61     class DiffieHellmanSHA256Session &lt; DiffieHellmanSession
+</span><span class="marked0"><a name="line62"></a> 62       @session_type = 'DH-SHA256'
+</span><span class="marked1"><a name="line63"></a> 63       @secret_size = 32
+</span><span class="marked0"><a name="line64"></a> 64       @allowed_assoc_types = ['HMAC-SHA256']
+</span><span class="marked1"><a name="line65"></a> 65       @hashfunc = CryptUtil.method(:sha256)
+</span><span class="inferred0"><a name="line66"></a> 66     end
+</span><span class="inferred1"><a name="line67"></a> 67 
+</span><span class="inferred0"><a name="line68"></a> 68     # An association session that does not use encryption
+</span><span class="marked1"><a name="line69"></a> 69     class NoEncryptionSession
+</span><span class="marked0"><a name="line70"></a> 70       class &lt;&lt; self
+</span><span class="marked1"><a name="line71"></a> 71         attr_reader :session_type, :allowed_assoc_types
+</span><span class="inferred0"><a name="line72"></a> 72       end
+</span><span class="marked1"><a name="line73"></a> 73       @session_type = 'no-encryption'
+</span><span class="marked0"><a name="line74"></a> 74       @allowed_assoc_types = ['HMAC-SHA1', 'HMAC-SHA256']
+</span><span class="inferred1"><a name="line75"></a> 75 
+</span><span class="marked0"><a name="line76"></a> 76       def get_request
+</span><span class="uncovered1"><a name="line77"></a> 77         return {}
+</span><span class="uncovered0"><a name="line78"></a> 78       end
+</span><span class="inferred1"><a name="line79"></a> 79 
+</span><span class="marked0"><a name="line80"></a> 80       def extract_secret(response)
+</span><span class="uncovered1"><a name="line81"></a> 81         mac_key64 = response.get_arg(OPENID_NS, 'mac_key', NO_DEFAULT)
+</span><span class="uncovered0"><a name="line82"></a> 82         return Util.from_base64(mac_key64)
+</span><span class="uncovered1"><a name="line83"></a> 83       end
+</span><span class="uncovered0"><a name="line84"></a> 84     end
+</span><span class="inferred1"><a name="line85"></a> 85 
+</span><span class="inferred0"><a name="line86"></a> 86     # An object that manages creating and storing associations for an
+</span><span class="inferred1"><a name="line87"></a> 87     # OpenID provider endpoint
+</span><span class="marked0"><a name="line88"></a> 88     class AssociationManager
+</span><span class="marked1"><a name="line89"></a> 89       def self.create_session(session_type)
+</span><span class="uncovered0"><a name="line90"></a> 90         case session_type
+</span><span class="uncovered1"><a name="line91"></a> 91         when 'no-encryption'
+</span><span class="uncovered0"><a name="line92"></a> 92           NoEncryptionSession.new
+</span><span class="uncovered1"><a name="line93"></a> 93         when 'DH-SHA1'
+</span><span class="uncovered0"><a name="line94"></a> 94           DiffieHellmanSHA1Session.new
+</span><span class="uncovered1"><a name="line95"></a> 95         when 'DH-SHA256'
+</span><span class="uncovered0"><a name="line96"></a> 96           DiffieHellmanSHA256Session.new
+</span><span class="uncovered1"><a name="line97"></a> 97         else
+</span><span class="uncovered0"><a name="line98"></a> 98           raise ArgumentError, &quot;Unknown association session type: &quot;\
+</span><span class="uncovered1"><a name="line99"></a> 99                                &quot;#{session_type.inspect}&quot;
+</span><span class="uncovered0"><a name="line100"></a>100         end
+</span><span class="uncovered1"><a name="line101"></a>101       end
+</span><span class="inferred0"><a name="line102"></a>102 
+</span><span class="inferred1"><a name="line103"></a>103       def initialize(store, server_url, compatibility_mode=false,
+</span><span class="marked0"><a name="line104"></a>104                      negotiator=nil)
+</span><span class="uncovered1"><a name="line105"></a>105         @store = store
+</span><span class="uncovered0"><a name="line106"></a>106         @server_url = server_url
+</span><span class="uncovered1"><a name="line107"></a>107         @compatibility_mode = compatibility_mode
+</span><span class="uncovered0"><a name="line108"></a>108         @negotiator = negotiator || DefaultNegotiator
+</span><span class="uncovered1"><a name="line109"></a>109       end
+</span><span class="inferred0"><a name="line110"></a>110 
+</span><span class="marked1"><a name="line111"></a>111       def get_association
+</span><span class="uncovered0"><a name="line112"></a>112         if @store.nil?
+</span><span class="uncovered1"><a name="line113"></a>113           return nil
+</span><span class="uncovered0"><a name="line114"></a>114         end
+</span><span class="uncovered1"><a name="line115"></a>115 
+</span><span class="uncovered0"><a name="line116"></a>116         assoc = @store.get_association(@server_url)
+</span><span class="uncovered1"><a name="line117"></a>117         if assoc.nil? || assoc.expires_in &lt;= 0
+</span><span class="uncovered0"><a name="line118"></a>118           assoc = negotiate_association
+</span><span class="uncovered1"><a name="line119"></a>119           if !assoc.nil?
+</span><span class="uncovered0"><a name="line120"></a>120             @store.store_association(@server_url, assoc)
+</span><span class="uncovered1"><a name="line121"></a>121           end
+</span><span class="uncovered0"><a name="line122"></a>122         end
+</span><span class="uncovered1"><a name="line123"></a>123 
+</span><span class="uncovered0"><a name="line124"></a>124         return assoc
+</span><span class="uncovered1"><a name="line125"></a>125       end
+</span><span class="inferred0"><a name="line126"></a>126 
+</span><span class="marked1"><a name="line127"></a>127       def negotiate_association
+</span><span class="uncovered0"><a name="line128"></a>128         assoc_type, session_type = @negotiator.get_allowed_type
+</span><span class="uncovered1"><a name="line129"></a>129         begin
+</span><span class="uncovered0"><a name="line130"></a>130           return request_association(assoc_type, session_type)
+</span><span class="uncovered1"><a name="line131"></a>131         rescue ServerError =&gt; why
+</span><span class="uncovered0"><a name="line132"></a>132           supported_types = extract_supported_association_type(why, assoc_type)
+</span><span class="uncovered1"><a name="line133"></a>133           if !supported_types.nil?
+</span><span class="uncovered0"><a name="line134"></a>134             # Attempt to create an association from the assoc_type and
+</span><span class="uncovered1"><a name="line135"></a>135             # session_type that the server told us it supported.
+</span><span class="uncovered0"><a name="line136"></a>136             assoc_type, session_type = supported_types
+</span><span class="uncovered1"><a name="line137"></a>137             begin
+</span><span class="uncovered0"><a name="line138"></a>138               return request_association(assoc_type, session_type)
+</span><span class="uncovered1"><a name="line139"></a>139             rescue ServerError =&gt; why
+</span><span class="uncovered0"><a name="line140"></a>140               Util.log(&quot;Server #{@server_url} refused its suggested &quot; \
+</span><span class="uncovered1"><a name="line141"></a>141                        &quot;association type: session_type=#{session_type}, &quot; \
+</span><span class="uncovered0"><a name="line142"></a>142                        &quot;assoc_type=#{assoc_type}&quot;)
+</span><span class="uncovered1"><a name="line143"></a>143               return nil
+</span><span class="uncovered0"><a name="line144"></a>144             end
+</span><span class="uncovered1"><a name="line145"></a>145           end
+</span><span class="uncovered0"><a name="line146"></a>146         end
+</span><span class="uncovered1"><a name="line147"></a>147       end
+</span><span class="inferred0"><a name="line148"></a>148 
+</span><span class="marked1"><a name="line149"></a>149       protected
+</span><span class="marked0"><a name="line150"></a>150       def extract_supported_association_type(server_error, assoc_type)
+</span><span class="uncovered1"><a name="line151"></a>151         # Any error message whose code is not 'unsupported-type' should
+</span><span class="uncovered0"><a name="line152"></a>152         # be considered a total failure.
+</span><span class="uncovered1"><a name="line153"></a>153         if (server_error.error_code != 'unsupported-type' or
+</span><span class="uncovered0"><a name="line154"></a>154             server_error.message.is_openid1)
+</span><span class="uncovered1"><a name="line155"></a>155           Util.log(&quot;Server error when requesting an association from &quot;\
+</span><span class="uncovered0"><a name="line156"></a>156                    &quot;#{@server_url}: #{server_error.error_text}&quot;)
+</span><span class="uncovered1"><a name="line157"></a>157           return nil
+</span><span class="uncovered0"><a name="line158"></a>158         end
+</span><span class="uncovered1"><a name="line159"></a>159 
+</span><span class="uncovered0"><a name="line160"></a>160         # The server didn't like the association/session type that we
+</span><span class="uncovered1"><a name="line161"></a>161         # sent, and it sent us back a message that might tell us how to
+</span><span class="uncovered0"><a name="line162"></a>162         # handle it.
+</span><span class="uncovered1"><a name="line163"></a>163         Util.log(&quot;Unsupported association type #{assoc_type}: &quot;\
+</span><span class="uncovered0"><a name="line164"></a>164                  &quot;#{server_error.error_text}&quot;)
+</span><span class="uncovered1"><a name="line165"></a>165 
+</span><span class="uncovered0"><a name="line166"></a>166         # Extract the session_type and assoc_type from the error message
+</span><span class="uncovered1"><a name="line167"></a>167         assoc_type = server_error.message.get_arg(OPENID_NS, 'assoc_type')
+</span><span class="uncovered0"><a name="line168"></a>168         session_type = server_error.message.get_arg(OPENID_NS, 'session_type')
+</span><span class="uncovered1"><a name="line169"></a>169 
+</span><span class="uncovered0"><a name="line170"></a>170         if assoc_type.nil? or session_type.nil?
+</span><span class="uncovered1"><a name="line171"></a>171           Util.log(&quot;Server #{@server_url} responded with unsupported &quot;\
+</span><span class="uncovered0"><a name="line172"></a>172                    &quot;association session but did not supply a fallback.&quot;)
+</span><span class="uncovered1"><a name="line173"></a>173           return nil
+</span><span class="uncovered0"><a name="line174"></a>174         elsif !@negotiator.allowed?(assoc_type, session_type)
+</span><span class="uncovered1"><a name="line175"></a>175           Util.log(&quot;Server sent unsupported session/association type: &quot;\
+</span><span class="uncovered0"><a name="line176"></a>176                    &quot;session_type=#{session_type}, assoc_type=#{assoc_type}&quot;)
+</span><span class="uncovered1"><a name="line177"></a>177           return nil
+</span><span class="uncovered0"><a name="line178"></a>178         else
+</span><span class="uncovered1"><a name="line179"></a>179           return [assoc_type, session_type]
+</span><span class="uncovered0"><a name="line180"></a>180         end
+</span><span class="uncovered1"><a name="line181"></a>181       end
+</span><span class="inferred0"><a name="line182"></a>182 
+</span><span class="inferred1"><a name="line183"></a>183       # Make and process one association request to this endpoint's OP
+</span><span class="inferred0"><a name="line184"></a>184       # endpoint URL. Returns an association object or nil if the
+</span><span class="inferred1"><a name="line185"></a>185       # association processing failed. Raises ServerError when the
+</span><span class="inferred0"><a name="line186"></a>186       # remote OpenID server returns an error.
+</span><span class="marked1"><a name="line187"></a>187       def request_association(assoc_type, session_type)
+</span><span class="uncovered0"><a name="line188"></a>188         assoc_session, args = create_associate_request(assoc_type, session_type)
+</span><span class="uncovered1"><a name="line189"></a>189 
+</span><span class="uncovered0"><a name="line190"></a>190         response = OpenID.make_kv_post(args, @server_url)
+</span><span class="uncovered1"><a name="line191"></a>191 
+</span><span class="uncovered0"><a name="line192"></a>192         begin
+</span><span class="uncovered1"><a name="line193"></a>193           return extract_association(response, assoc_session)
+</span><span class="uncovered0"><a name="line194"></a>194         rescue Message::KeyNotFound =&gt; why
+</span><span class="uncovered1"><a name="line195"></a>195           Util.log(&quot;Missing required parameter in response from &quot;\
+</span><span class="uncovered0"><a name="line196"></a>196                    &quot;#{@server_url}: #{why}&quot;)
+</span><span class="uncovered1"><a name="line197"></a>197           return nil
+</span><span class="uncovered0"><a name="line198"></a>198 
+</span><span class="uncovered1"><a name="line199"></a>199         rescue ProtocolError =&gt; why
+</span><span class="uncovered0"><a name="line200"></a>200           Util.log(&quot;Protocol error processing response from #{@server_url}: &quot;\
+</span><span class="uncovered1"><a name="line201"></a>201                    &quot;#{why}&quot;)
+</span><span class="uncovered0"><a name="line202"></a>202           return nil
+</span><span class="uncovered1"><a name="line203"></a>203         end
+</span><span class="uncovered0"><a name="line204"></a>204       end
+</span><span class="inferred1"><a name="line205"></a>205 
+</span><span class="inferred0"><a name="line206"></a>206       # Create an association request for the given assoc_type and
+</span><span class="inferred1"><a name="line207"></a>207       # session_type. Returns a pair of the association session object
+</span><span class="inferred0"><a name="line208"></a>208       # and the request message that will be sent to the server.
+</span><span class="marked1"><a name="line209"></a>209       def create_associate_request(assoc_type, session_type)
+</span><span class="uncovered0"><a name="line210"></a>210         assoc_session = self.class.create_session(session_type)
+</span><span class="uncovered1"><a name="line211"></a>211         args = {
+</span><span class="uncovered0"><a name="line212"></a>212           'mode' =&gt; 'associate',
+</span><span class="uncovered1"><a name="line213"></a>213           'assoc_type' =&gt; assoc_type,
+</span><span class="uncovered0"><a name="line214"></a>214         }
+</span><span class="uncovered1"><a name="line215"></a>215 
+</span><span class="uncovered0"><a name="line216"></a>216         if !@compatibility_mode
+</span><span class="uncovered1"><a name="line217"></a>217           args['ns'] = OPENID2_NS
+</span><span class="uncovered0"><a name="line218"></a>218         end
+</span><span class="uncovered1"><a name="line219"></a>219 
+</span><span class="uncovered0"><a name="line220"></a>220         # Leave out the session type if we're in compatibility mode
+</span><span class="uncovered1"><a name="line221"></a>221         # *and* it's no-encryption.
+</span><span class="uncovered0"><a name="line222"></a>222         if !@compatibility_mode ||
+</span><span class="uncovered1"><a name="line223"></a>223             assoc_session.class.session_type != 'no-encryption'
+</span><span class="uncovered0"><a name="line224"></a>224           args['session_type'] = assoc_session.class.session_type
+</span><span class="uncovered1"><a name="line225"></a>225         end
+</span><span class="uncovered0"><a name="line226"></a>226 
+</span><span class="uncovered1"><a name="line227"></a>227         args.merge!(assoc_session.get_request)
+</span><span class="uncovered0"><a name="line228"></a>228         message = Message.from_openid_args(args)
+</span><span class="uncovered1"><a name="line229"></a>229         return assoc_session, message
+</span><span class="uncovered0"><a name="line230"></a>230       end
+</span><span class="inferred1"><a name="line231"></a>231 
+</span><span class="inferred0"><a name="line232"></a>232       # Given an association response message, extract the OpenID 1.X
+</span><span class="inferred1"><a name="line233"></a>233       # session type. Returns the association type for this message
+</span><span class="inferred0"><a name="line234"></a>234       #
+</span><span class="inferred1"><a name="line235"></a>235       # This function mostly takes care of the 'no-encryption' default
+</span><span class="inferred0"><a name="line236"></a>236       # behavior in OpenID 1.
+</span><span class="inferred1"><a name="line237"></a>237       #
+</span><span class="inferred0"><a name="line238"></a>238       # If the association type is plain-text, this function will
+</span><span class="inferred1"><a name="line239"></a>239       # return 'no-encryption'
+</span><span class="marked0"><a name="line240"></a>240       def get_openid1_session_type(assoc_response)
+</span><span class="uncovered1"><a name="line241"></a>241         # If it's an OpenID 1 message, allow session_type to default
+</span><span class="uncovered0"><a name="line242"></a>242         # to nil (which signifies &quot;no-encryption&quot;)
+</span><span class="uncovered1"><a name="line243"></a>243         session_type = assoc_response.get_arg(OPENID1_NS, 'session_type')
+</span><span class="uncovered0"><a name="line244"></a>244 
+</span><span class="uncovered1"><a name="line245"></a>245         # Handle the differences between no-encryption association
+</span><span class="uncovered0"><a name="line246"></a>246         # respones in OpenID 1 and 2:
+</span><span class="uncovered1"><a name="line247"></a>247 
+</span><span class="uncovered0"><a name="line248"></a>248         # no-encryption is not really a valid session type for
+</span><span class="uncovered1"><a name="line249"></a>249         # OpenID 1, but we'll accept it anyway, while issuing a
+</span><span class="uncovered0"><a name="line250"></a>250         # warning.
+</span><span class="uncovered1"><a name="line251"></a>251         if session_type == 'no-encryption'
+</span><span class="uncovered0"><a name="line252"></a>252           Util.log(&quot;WARNING: #{@server_url} sent 'no-encryption'&quot;\
+</span><span class="uncovered1"><a name="line253"></a>253                    &quot;for OpenID 1.X&quot;)
+</span><span class="uncovered0"><a name="line254"></a>254 
+</span><span class="uncovered1"><a name="line255"></a>255         # Missing or empty session type is the way to flag a
+</span><span class="uncovered0"><a name="line256"></a>256         # 'no-encryption' response. Change the session type to
+</span><span class="uncovered1"><a name="line257"></a>257         # 'no-encryption' so that it can be handled in the same
+</span><span class="uncovered0"><a name="line258"></a>258         # way as OpenID 2 'no-encryption' respones.
+</span><span class="uncovered1"><a name="line259"></a>259         elsif session_type == '' || session_type.nil?
+</span><span class="uncovered0"><a name="line260"></a>260           session_type = 'no-encryption'
+</span><span class="uncovered1"><a name="line261"></a>261         end
+</span><span class="uncovered0"><a name="line262"></a>262 
+</span><span class="uncovered1"><a name="line263"></a>263         return session_type
+</span><span class="uncovered0"><a name="line264"></a>264       end
+</span><span class="inferred1"><a name="line265"></a>265 
+</span><span class="marked0"><a name="line266"></a>266       def self.extract_expires_in(message)
+</span><span class="uncovered1"><a name="line267"></a>267         # expires_in should be a base-10 string.
+</span><span class="uncovered0"><a name="line268"></a>268         expires_in_str = message.get_arg(OPENID_NS, 'expires_in', NO_DEFAULT)
+</span><span class="uncovered1"><a name="line269"></a>269         if !(/\A\d+\Z/ =~ expires_in_str)
+</span><span class="uncovered0"><a name="line270"></a>270           raise ProtocolError, &quot;Invalid expires_in field: #{expires_in_str}&quot;
+</span><span class="uncovered1"><a name="line271"></a>271         end
+</span><span class="uncovered0"><a name="line272"></a>272         expires_in_str.to_i
+</span><span class="uncovered1"><a name="line273"></a>273       end
+</span><span class="inferred0"><a name="line274"></a>274 
+</span><span class="inferred1"><a name="line275"></a>275       # Attempt to extract an association from the response, given the
+</span><span class="inferred0"><a name="line276"></a>276       # association response message and the established association
+</span><span class="inferred1"><a name="line277"></a>277       # session.
+</span><span class="marked0"><a name="line278"></a>278       def extract_association(assoc_response, assoc_session)
+</span><span class="uncovered1"><a name="line279"></a>279         # Extract the common fields from the response, raising an
+</span><span class="uncovered0"><a name="line280"></a>280         # exception if they are not found
+</span><span class="uncovered1"><a name="line281"></a>281         assoc_type = assoc_response.get_arg(OPENID_NS, 'assoc_type',
+</span><span class="uncovered0"><a name="line282"></a>282                                             NO_DEFAULT)
+</span><span class="uncovered1"><a name="line283"></a>283         assoc_handle = assoc_response.get_arg(OPENID_NS, 'assoc_handle',
+</span><span class="uncovered0"><a name="line284"></a>284                                               NO_DEFAULT)
+</span><span class="uncovered1"><a name="line285"></a>285         expires_in = self.class.extract_expires_in(assoc_response)
+</span><span class="uncovered0"><a name="line286"></a>286 
+</span><span class="uncovered1"><a name="line287"></a>287         # OpenID 1 has funny association session behaviour.
+</span><span class="uncovered0"><a name="line288"></a>288         if assoc_response.is_openid1:
+</span><span class="uncovered1"><a name="line289"></a>289             session_type = get_openid1_session_type(assoc_response)
+</span><span class="uncovered0"><a name="line290"></a>290         else
+</span><span class="uncovered1"><a name="line291"></a>291           session_type = assoc_response.get_arg(OPENID2_NS, 'session_type',
+</span><span class="uncovered0"><a name="line292"></a>292                                                 NO_DEFAULT)
+</span><span class="uncovered1"><a name="line293"></a>293         end
+</span><span class="uncovered0"><a name="line294"></a>294 
+</span><span class="uncovered1"><a name="line295"></a>295         # Session type mismatch
+</span><span class="uncovered0"><a name="line296"></a>296         if assoc_session.class.session_type != session_type
+</span><span class="uncovered1"><a name="line297"></a>297           if (assoc_response.is_openid1 and session_type == 'no-encryption')
+</span><span class="uncovered0"><a name="line298"></a>298             # In OpenID 1, any association request can result in a
+</span><span class="uncovered1"><a name="line299"></a>299             # 'no-encryption' association response. Setting
+</span><span class="uncovered0"><a name="line300"></a>300             # assoc_session to a new no-encryption session should
+</span><span class="uncovered1"><a name="line301"></a>301             # make the rest of this function work properly for
+</span><span class="uncovered0"><a name="line302"></a>302             # that case.
+</span><span class="uncovered1"><a name="line303"></a>303             assoc_session = NoEncryptionSession.new
+</span><span class="uncovered0"><a name="line304"></a>304           else
+</span><span class="uncovered1"><a name="line305"></a>305             # Any other mismatch, regardless of protocol version
+</span><span class="uncovered0"><a name="line306"></a>306             # results in the failure of the association session
+</span><span class="uncovered1"><a name="line307"></a>307             # altogether.
+</span><span class="uncovered0"><a name="line308"></a>308             raise ProtocolError, &quot;Session type mismatch. Expected &quot;\
+</span><span class="uncovered1"><a name="line309"></a>309                                  &quot;#{assoc_session.class.session_type}, got &quot;\
+</span><span class="uncovered0"><a name="line310"></a>310                                  &quot;#{session_type}&quot;
+</span><span class="uncovered1"><a name="line311"></a>311           end
+</span><span class="uncovered0"><a name="line312"></a>312         end
+</span><span class="uncovered1"><a name="line313"></a>313 
+</span><span class="uncovered0"><a name="line314"></a>314         # Make sure assoc_type is valid for session_type
+</span><span class="uncovered1"><a name="line315"></a>315         if !assoc_session.class.allowed_assoc_types.member?(assoc_type)
+</span><span class="uncovered0"><a name="line316"></a>316           raise ProtocolError, &quot;Unsupported assoc_type for session &quot;\
+</span><span class="uncovered1"><a name="line317"></a>317                                &quot;#{assoc_session.class.session_type} &quot;\
+</span><span class="uncovered0"><a name="line318"></a>318                                &quot;returned: #{assoc_type}&quot;
+</span><span class="uncovered1"><a name="line319"></a>319         end
+</span><span class="uncovered0"><a name="line320"></a>320 
+</span><span class="uncovered1"><a name="line321"></a>321         # Delegate to the association session to extract the secret
+</span><span class="uncovered0"><a name="line322"></a>322         # from the response, however is appropriate for that session
+</span><span class="uncovered1"><a name="line323"></a>323         # type.
+</span><span class="uncovered0"><a name="line324"></a>324         begin
+</span><span class="uncovered1"><a name="line325"></a>325           secret = assoc_session.extract_secret(assoc_response)
+</span><span class="uncovered0"><a name="line326"></a>326         rescue Message::KeyNotFound, ArgumentError =&gt; why
+</span><span class="uncovered1"><a name="line327"></a>327           raise ProtocolError, &quot;Malformed response for &quot;\
+</span><span class="uncovered0"><a name="line328"></a>328                                &quot;#{assoc_session.class.session_type} &quot;\
+</span><span class="uncovered1"><a name="line329"></a>329                                &quot;session: #{why.message}&quot;
+</span><span class="uncovered0"><a name="line330"></a>330         end
+</span><span class="uncovered1"><a name="line331"></a>331 
+</span><span class="uncovered0"><a name="line332"></a>332 
+</span><span class="uncovered1"><a name="line333"></a>333         return Association.from_expires_in(expires_in, assoc_handle, secret,
+</span><span class="uncovered0"><a name="line334"></a>334                                            assoc_type)
+</span><span class="uncovered1"><a name="line335"></a>335       end
+</span><span class="uncovered0"><a name="line336"></a>336     end
+</span><span class="uncovered1"><a name="line337"></a>337   end
+</span><span class="uncovered0"><a name="line338"></a>338 end
+</span></pre><hr/>
+    <p>Generated using the <a href='http://eigenclass.org/hiki.rb?rcov'>rcov code coverage analysis tool for Ruby</a>
+   version 0.8.1.2.</p>
+<p><a href='http://validator.w3.org/check/referer'><img src='http://www.w3.org/Icons/valid-xhtml10' height='31' alt='Valid XHTML 1.0!' width='88'/>
+        </a>
+      <a href='http://jigsaw.w3.org/css-validator/check/referer'><img src='http://jigsaw.w3.org/css-validator/images/vcss' alt='Valid CSS!' style='border:0;width:88px;height:31px'/>
+        </a>
+      </p>
+    </body>
+  </html>

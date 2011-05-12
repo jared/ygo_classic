@@ -1,0 +1,15 @@
+<div id="spinner" style="display: none;">Working...</div>
+<div id="site_header">
+	<%= link_to image_tag('logo.png', :alt => "Your Garage Online", :size => '309x58'), home_url %>
+	
+	<% if logged_in? %>
+		<div id="header_links">
+			<%= link_to( image_tag('icons/wrench_48_label.png', :alt => "Work Orders", :size => '48x64'), car_work_orders_path(@car) ) unless (@car.nil? || @car.new_record?) %>
+			<%= link_to( image_tag('icons/car_48_label.png', :alt => "Garage", :size => '48x64'), cars_path ) %>
+			<%= link_to( image_tag('icons/user_48_label.png', :alt => "My Account", :size => '48x64'), edit_user_path ) %>
+		<p id="link_name">&nbsp;</p>
+		</div>
+	<% else %>
+		<div id="login_link"><%= link_to "Login", new_session_path %> <%= link_to "Sign Up", new_user_path %></div>
+	<% end %>
+</div>

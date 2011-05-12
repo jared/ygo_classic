@@ -1,0 +1,51 @@
+<div class="user_form">
+	<h2>Log in</h2>
+	<% if flash[:error] %>
+		<p class="error"><%= flash[:error] %></p>
+	<% end %>
+
+	<% form_tag session_path, :id => "login_form" do -%>
+		<fieldset>
+			<legend>Log In</legend>
+			<div id="traditional" style="<%= params[:use_open_id].blank? ? '' : 'display: none;'  %>">
+				<ol class="login">
+					<li>
+						<label for="login">Login</label> 
+						<%= text_field_tag 'login' %>
+						<span class="login_mode">(<%= link_to_function "Use OpenID", update_page{|page| page[:traditional].toggle; page[:open_id].toggle;} -%>)</span>
+					</li>
+
+					<li>
+						<label for="password">Password</label>
+						<%= password_field_tag 'password' %>
+					</li>
+
+					<li>
+						<label for="remember_me">Remember me:</label>
+						<%= check_box_tag 'remember_me' -%>
+					</li>
+
+				</ol>
+			</div>
+			<div id="open_id" style="<%= params[:use_open_id].blank? ? 'display:none;' : ''  %>">
+				<ol class="login">
+			    <li>
+						<label for="openid_url">OpenID</label>
+			      <%= text_field_tag "openid_url", nil, :class => 'openid' %>
+						<span class="login_mode">(<%= link_to_function "Use Login/Password", update_page{|page| page[:traditional].toggle; page[:open_id].toggle;} %>)</span>
+					</li>
+
+					<li>
+						<label for="remember_me">Remember me:</label>
+						<%= check_box_tag 'remember_me' -%>
+					</li>
+
+				</ol>
+			</div>
+		</fieldset>
+		<fieldset class="submit">
+			<%= image_submit_tag "buttons/profile/login.gif", :class => 'submit' %>
+		</fieldset>
+	<% end -%>
+	<br class="clear" />
+</div>

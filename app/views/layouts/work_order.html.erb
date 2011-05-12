@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<title><%= yield(:title) || 'Repairs' %></title>
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<%= stylesheet_link_tag 'shared', 'work_order', 'calendar' %>
+		<%= javascript_include_tag :all, :cache => true %>
+		<!--[if gte IE 7.]>
+			<%= stylesheet_link_tag 'ie7win' %>
+		<![endif]-->
+		<!--[if lt IE 7.]>
+			<%= stylesheet_link_tag 'ie6win' %>
+		<![endif]-->
+	</head>
+	<body>
+		<%= render :partial => "/layouts/site_header" %>
+		<div id="content">
+
+			<%= yield :errors %>
+			<div id="work_order_form">
+				<%= yield %>
+				<p class="customer">
+					Customer: <span class="data"><%= @car.user.display_name.titleize %> </span>
+				</p>
+				<p class="vin">
+					VIN: <span class="data"><%= @car.vehicle_identification_number.blank? ? "Not on file." : @car.vehicle_identification_number %></span>
+				</p>
+
+				<br class="clear" />
+			</div>
+			
+		</div>
+		<%= render :partial => "/layouts/site_footer" %>
+	</body>
+</html>

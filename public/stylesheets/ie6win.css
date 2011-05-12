@@ -1,0 +1,10 @@
+img { behavior: url("/javascripts/pngbehavior.htc"); }
+#user_form { width: 700px; }
+#form_header { height: 100px; }
+#form_header_vehicle h2 { font-size: 20px; margin: 0 0 0 4em; padding: 1em 1em 0 1em; width: 250px; height: 48px; }
+#spinner { position:absolute; top: 0; right:0; }
+#required_fields, #optional_fields { background-color: transparent; }
+.line_item_description { width: 50%; }
+.line_item_work_type { width: 48%; }
+div.new_car_overlay { filter:alpha(opacity=75); }
+div.form_extras { width: 200px;}

@@ -1,0 +1,4 @@
+<tr id="<%= dom_id(line_item) %>">
+	<td class="line_item_description"><%= line_item.description %></td>
+	<td class="line_item_action"><%= link_to_remote(image_tag('icons/delete.gif', :alt => "X", :size => '16x16'), :url => work_order_line_item_path(@work_order, line_item), :method => :delete) unless params[:action] == 'show' %></td>
+</tr>

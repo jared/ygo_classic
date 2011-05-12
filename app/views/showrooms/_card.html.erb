@@ -1,0 +1,55 @@
+<h3>Vehicle Registration</h3>
+<table>
+	<thead>
+		<tr>
+			<th class="year">Year</th>
+			<th class="make">Make</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><%=h car.year %></td>
+			<td><%=h car.make %></td>
+		</tr>
+	</tbody>
+</table>
+<table>
+	<thead>
+		<tr>
+			<th class="model">Model</th>
+			<th class="color">Color</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><%=h car.model %></td>
+			<td><%=h car.color %></td>
+		</tr>
+	</tbody>
+</table>
+<table>
+	<thead>
+		<tr>
+			<th colspan="2">Highest Recorded Mileage</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style="text-align: center;"><%= odometer(car.work_orders.maximum(:mileage)) %></td>
+		</tr>
+	</tbody>
+</table>
+<table>
+	<thead>
+		<tr>
+			<th class="model">Work Orders</th>
+			<th class="color">Repair Cost</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><%= pluralize(car.work_orders.size, 'repair') %></td>
+			<td><%= number_to_currency car.work_orders.sum(:total_cost) %></td>
+		</tr>
+	</tbody>
+</table>

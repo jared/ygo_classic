@@ -1,0 +1,53 @@
+/* @override http://localhost:3000/stylesheets/shared.css?1201459203 */
+html {
+	height:  100%;
+}
+
+/* Site-wide common layout and formatting */
+body { height:  100%; background: #666 url(/images/backdrops/stripes.png) repeat-x scroll 0 0; color: #ddd; margin: 0; padding: 0; }
+body, p, ol, ul, td { line-height: 18px; }
+a img { border: 0; }
+a { color: #fff; text-decoration: underline; }
+a:visited { color: #ccc; }
+a:hover { color: #fff; text-decoration: underline; }
+br.clear { clear: both; }
+h2 { padding-left: 1em; }
+
+#content { min-width: 250px; margin: 20px auto; padding: 1em 1em 4em 1em; }
+
+/* Header section layout and formatting */
+#site_header { margin: 0; padding: 0; height: 120px; font-family: verdana, arial, helvetica, sans-serif; font-size: 13px; line-height: 18px; }
+#site_header img { float: left; padding: 1em; }
+
+#spinner { clear: both; margin: 0; padding: .25em 1em; position: fixed; right: 0; top: 0; z-index: 500; background-color: #CC0000; color: #FFFFFF; font-style: italic; font-weight: bold; }
+
+#header_links { float: right; clear: none; padding: .5em 1em; }
+#header_links a { color: #fff; }
+#header_links p { clear: both; text-align: right; font: normal 18px "Lucida Grande", Lucida, Verdana, sans-serif; padding-right: 1em; margin: 0; padding-top: 0; }
+
+#login_link { float: right; clear: right; color: #004566; padding: 0 .25em .5em;  }
+#login_link a { color: #fff; padding: 0 1em; text-decoration: none; }
+#login_link a:hover { text-decoration: underline; }
+
+/* Footer section */
+#footer { position: relative; height: 3.5em; padding: 1em; background-color: #333; font-family: "Lucida Grande", Lucida, Verdana, sans-serif; }
+#footer p { margin: 20px auto; width: 700px; text-align: center; color: #ddd; padding-bottom: 0; margin-bottom: 0; font-size: 11px; line-height: 18px; }
+#footer p a { color: #fff; text-decoration: none; }
+#footer p a:hover { color: #fff; background-color: transparent; text-decoration: underline; }
+
+/* General layout and formatting */
+p.right { text-align: right; font-size: 14px; }
+p.left { float: left; margin: 1em; text-align: center; }
+
+
+
+
+/* Error styles */
+#errorExplanation { width: 700px; border: 2px solid red; padding: 7px; padding-bottom: 12px; margin: 20px auto; margin-bottom: 20px; background-color: #333; font-family: verdana, arial, helvetica, sans-serif; font-size: 13px; line-height: 18px; }
+#errorExplanation h2 { text-align: left; font-weight: bold; padding: 5px 5px 5px 15px; font-size: 12px; margin: -7px; background-color: #c00; color: #fff; }
+#errorExplanation p { color: #999; margin-bottom: 0; padding: 5px; }
+#errorExplanation ul li { font-size: 12px; list-style: square; }
+.formError { color: #da0; }
+.fieldError { background-color: #da0; }
+.fieldWithErrors { padding: 2px; background-color: red; display: table; }
+

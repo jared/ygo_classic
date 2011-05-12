@@ -1,0 +1,179 @@
+a {
+color: #333;
+text-decoration: none;
+}
+a:visited {
+color: #666;
+}
+a:hover {
+color: #666;
+text-decoration: underline;
+}
+
+#work_order_form {
+margin: 20px auto;
+padding-left: 24px;
+padding-right: 24px;
+background: transparent url(/images/backdrops/tractor.gif) repeat-y center top;
+width: 700px;
+color: #72450B;
+font-family: verdana, arial, helvetica, sans-serif;
+font-size: 13px;
+line-height: 18px;
+}
+#work_order_notice {
+text-align: right;
+color: #c33;
+font-weight: bold;
+}
+
+#form_header {
+border-bottom-style: solid;
+border-bottom-width: 2px;
+}
+#form_header_vehicle {
+float: left;
+clear: both;
+height: 100px;
+display: inline;
+width: 450px;
+}
+#form_header_logo img {
+display: inline;
+float: left;
+clear: both;
+width: 96px;
+height: 96px;
+}
+#form_header_shop {
+padding-top: .25em;
+padding-left: .5em;
+padding-right: .5em;
+height: 100px;
+float: right;
+border-left: 2px solid #72450b;
+}
+#form_header_vehicle h2 {
+text-align: right;
+font-family: Georgia, "Times New Roman", Times, serif;
+}
+#repair_form p {
+width: 676px;
+padding: 0 12px;
+}
+#form_body {
+width: 676px;
+padding: 0 12px;
+}
+
+label {
+font-family: Georgia, "Times New Roman", Times, serif;
+}
+span.help {
+font-family: Georgia, "Times New Roman", Times, serif;
+font-style: italic;
+font-size: 13px;
+padding-left: 8em;
+}
+.form_data {
+font: 14px "Courier New", Courier, mono;
+border: 2px solid #72450b;
+padding-left: .25em;
+}
+p input.form_data, p textarea.form_data {
+width: 665px;
+margin: 0;
+}
+.query {
+font: 14px "Courier New", Courier, mono;
+border: 2px solid #72450b;
+padding-left: .25em;
+width: 80%;
+}
+
+table.work_orders {
+width: 652px;
+font-size: 13px;
+line-height: 18px;
+margin: 10px auto;
+}
+table.work_orders th {
+text-align: left;
+}
+table.work_orders td {
+color: #000;
+font-family: "Courier New", "Courier", monospace;
+border-bottom: 1px dashed #666;
+}
+table.work_orders td input {
+border: 0px;
+}
+
+.line_item_description {
+width: 638px;
+text-align: left;
+}
+.line_item_description input {
+width: 604px;
+font: 16px "Courier New", Courier, mono;
+border: 1px solid #72450b;
+padding-left: .25em;
+}
+.line_item_action {
+width: 16px;
+}
+
+dl {
+display: inline;
+margin: 0;
+padding: 0;
+width: 250px;
+}
+dl dt {
+margin: 0;
+padding: 5px 0 5px 5px;
+text-align: right;
+float: left;
+clear: left;
+width: 5em;
+}
+dl dd {
+margin-left: 6em;
+display: block;
+padding-left: 1em;
+padding-right: 0;
+padding-bottom: .125em;
+margin-top: .25em;
+}
+
+p.customer {
+float: left;
+}
+p.vin {
+float: right;
+}
+.data {
+color: #000;
+font: bold 15px "Courier New", Courier, mono;
+padding: .3em .5em .3em 0;
+}
+
+fieldset {
+background: #fd8 url(/images/backdrops/line_item_fieldset.jpg) repeat-x scroll bottom center;
+border: 1px dotted #72450b;
+font-size: 13px;
+line-height: 18px;
+padding: 12px;
+margin: 0;
+}
+fieldset legend {
+display: none;
+}
+fieldset label {
+font-size: 16px;
+}
+fieldset p {
+float: left;
+margin: 0;
+padding: 0;
+}

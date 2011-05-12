@@ -1,0 +1,54 @@
+<% title "Your Garage Online &raquo; #{@car.short_name} : #{@work_order.date.to_s(:db)} Repairs" %>
+
+<div id="form_header">
+
+	<div id="form_header_vehicle">
+		<div id="form_header_logo">
+			<%= image_tag('icons/tools-mono.gif', :alt => "Tools", :size => '96x96') %>
+		</div>
+		<h2><%= @car.name %></h2>
+	</div>
+
+	<div id="form_header_shop">
+		<dl>
+			<dt>Date:</dt>
+			<dd class="data"><%= @work_order.date.to_s(:db) %></dd>
+			
+			<dt>Mileage:</dt>
+			<dd class="data"><%= number_with_delimiter(@work_order.mileage) %></dd>
+
+
+			<dt>Cost:</dt>
+			<dd class="data"><%= number_to_currency(@work_order.total_cost) %></dd>
+		</dl>
+	</div>
+	<br class="clear" />
+</div>
+<div id="repair_form">
+	<p>
+		Facility:
+		<span class="data"><%= @work_order.shop %></span>
+	</p>
+	<p>
+		Notes:<br />
+		<span class="data"><%= @work_order.notes %></span>
+	</p>
+</div>
+	
+<div id="form_body">
+	<table class="work_orders">
+		<thead>
+			<tr>
+				<th class="line_item_description">Service Performed</th>
+				<th class="line_item_action">&nbsp;</th>
+			</tr>
+		</thead>
+		<tbody id="line_items">
+			<% @work_order.line_items.each do |item| %>
+				<%= render :partial => "/line_items/line_item", :locals => { :line_item => item } %>
+			<% end %>							
+		</tbody>
+	</table>
+	<p class="left"><%= link_to image_tag("buttons/remove.gif", :alt => "Remove", :size => '94x32'), car_work_order_path(@car, @work_order), :method => :delete, :confirm => "Really remove this work order?" %></p>
+	<p class="right"><%= link_to image_tag("buttons/work_orders/edit.gif", :alt => "Edit", :size => '69x32'), edit_car_work_order_path(@car, @work_order) %></p>
+</div>

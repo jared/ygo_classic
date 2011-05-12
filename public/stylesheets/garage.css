@@ -1,0 +1,19 @@
+a { color: #000; }
+a:visited { color: #666; }
+a:hover { color: #fff; background-color: #333; text-decoration: underline;  }
+ul.cards { margin: 0 auto; min-width: 325px; position: relative; float: left; }
+li.registration_card { float: left; display: block; width: 300px; height: 325px; background-color: #eee; margin: 10px 5px 15px 5px; padding: 0; text-align: center; position: relative; background: #fff url(/images/backdrops/eos_paper.gif) repeat scroll 0 0; color: #4471D1; border: 3px solid #4471d1; }
+h3 { margin: 0; background-color: #4471D1; color: #fff; font: 20px Georgia, "Times New Roman", Times, serif; padding: .25em; }
+table { width: 100%; margin: 0; border-collapse: collapse; border-bottom: 1px solid #4471d1; }
+th { border-right: 1px solid #4471d1; text-align: left; font: normal normal 11px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; padding: .25em .5em; }
+td { padding: .25em; border-right: 1px solid #4471d1; color: #000; font: bold 15px "Courier New", Courier, mono; text-align: left; }
+.year { width: 30%; }
+.make { width: 70%; }
+.model { width: 50%; }
+.color { width: 50%; }
+#car_actions { clear: left; text-align: left; margin: 0; padding: .5em; }
+#car_actions img { padding: .5em 0 0 0; }
+#car_actions a:hover { background-color: transparent; }
+div.new_car_overlay { width: 306px; background-color: #000; opacity: 0.75; z-index: 5; height: 331px; position: absolute; left: -3px; top: -3px; }
+div.new_car_overlay a { visibility: visible; opacity: 1; z-index: 10; color: #fff; text-decoration: none; position: relative; top: 3.4em; font: bold 35px "Lucida Grande", Lucida, Verdana, sans-serif; }
+div.new_car_overlay a:hover { text-decoration: underline; background-color: transparent; }

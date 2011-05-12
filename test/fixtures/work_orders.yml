@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+boogedy_service_1:
+  id: 1
+  car_id: 1
+  date: 2007-05-18
+  mileage: 138000
+  shop: "Cricket"
+  notes: "Routine Maintenance"
+  total_cost: 15.95
+yaffa_service_1:
+  id: 2
+  car_id: 2
+  date: 2007-01-18
+  mileage: 64000
+  shop: "Auto One"
+  notes: "Transmission Failure #2"
+  total_cost: 400
+yaffa_service_2:
+  id: 3
+  car_id: 2
+  date: 2007-02-20
+  mileage: 64500
+  shop: "Auto One"
+  notes: "Oil Change"
+  total_cost: 16.00

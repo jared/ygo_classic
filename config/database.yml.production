@@ -1,0 +1,6 @@
+production:
+  adapter: mysql
+  database: ygo_production
+  username: ygo
+  password: password
+  socket: /var/run/mysqld.sock

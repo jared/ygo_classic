@@ -1,0 +1,26 @@
+<% title "Your Garage Online &raquo; My Profile" %>
+
+<div class="user_form">
+	<h2>My Profile</h2>
+	<% if flash[:error] %>
+		<p class="error"><%= flash[:error] %></p>
+	<% end %>
+	
+	<% form_for( :user, :url => user_path, :html => { :method => :put } ) do |f| -%>
+		<fieldset>
+			<legend>My Profile</legend>
+			<ol>
+				<%= render :partial => "form", :locals => { :f => f } %>
+				<%= render :partial => "open_id_form", :locals => { :f => f } %>
+				<%= render :partial => "options_form", :locals => { :f => f } %>			
+			</ol>
+			<div class="form_extras">
+				<p>For more information on how the information you provide is used by Your Garage Online, please view our <%= link_to "privacy policy", privacy_path %>.</p>
+			</div>
+		</fieldset>
+		<fieldset class="submit">
+			<%= image_submit_tag "buttons/profile/update.gif", :class => 'submit' %>
+		</fieldset>
+	<% end -%>
+	<br class="clear" />
+</div>

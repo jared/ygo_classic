@@ -1,0 +1,16 @@
+Dear <%= @user.login %>:
+
+Thank you for signing up with YourGarageOnline.com.  Your account has been created with the following settings:
+
+Login: <%= @user.login %>
+Email: <%= @user.email %>
+Privacy:
+<% unless @user.receive_email? %>
+	As your privacy settings indicate you have opted not to receive email, this will be the only time we'll contact you about Your Garage Online.  
+<% else %>
+	You have indicated that you would like to receive email from Your Garage Online.  
+<% end %>
+Our <%= link_to "privacy policy", "http://www.yourgarageonline.com/privacy" %> contains information on how we use information collected on this site.  You may change this setting at any time by visiting your profile page.
+
+Welcome to the community!
+webmaster@yourgarageonline.com

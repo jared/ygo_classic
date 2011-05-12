@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<title>Registry of Online Vehicles</title>
+		<link rel="shortcut icon" href="/favicon.ico" />
+		
+		<%= stylesheet_link_tag 'shared', 'cars' %>
+		<%= javascript_include_tag :all, :cache => true %>
+		<!--[if gte IE 7.]>
+			<%= stylesheet_link_tag 'ie7win' %>
+		<![endif]-->
+		<!--[if lt IE 7.]>
+			<%= stylesheet_link_tag 'ie6win' %>
+		<![endif]-->
+	</head>
+	<body>
+			<%= render :partial => "/layouts/site_header" %>
+			<div id="content">
+				<div id="registry_form">
+					<div id="registry_header"><h1>Registry Form</h1></div>
+					<%= yield %>
+				</div>
+				
+			</div>
+					
+		<%= render :partial => "/layouts/site_footer" %>
+	</body>
+</html>

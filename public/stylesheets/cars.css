@@ -1,0 +1,21 @@
+p { font-family: verdana, arial, helvetica, sans-serif; font-size: 13px; line-height: 18px; }
+#registry_form { margin: 1em; margin-left: 25%; margin-right: 25%; padding: 1em; background: #fff url(/images/backdrops/eos_paper.gif) repeat scroll 0 0; background-color: #fff; width: 400px; color: #4471D1; border: 3px solid #4471d1; }
+#registry_form h1 { padding: 0; margin-top: 0; }
+#registry_form h2 { background-color: #4471d1; color: #fff; padding: .25em; margin: 10px 0 0 0 ; }
+#required_fields, #optional_fields { clear: both; }
+#required_fields br, #optional_fields br { clear: both; }
+p.optional_fields_info { color: #3A5CA7; }
+p.form_left { margin: 0 10px 0 0; padding-right: 10px; float: left; clear: both; width: 190px; }
+p.form_left input { border: 2px solid #4471d1; width: 175px; text-align: right; padding-right: 5px; font-size: 16px; font-family: "Courier New", "Courier", monospace; }
+p.form_right { padding: 0; margin: 0; float: left; width: 190px; }
+p.form_right input { border: 2px solid #4471d1; width: 175px; text-align: right; padding-right: 5px; font-size: 16px; font-family: "Courier New", "Courier", monospace; }
+p.form_span { margin: 0 10px 0 0; padding-right: 10px; float: left; clear: both; width: 395px; }
+p.form_span input { border: 2px solid #4471d1; width: 375px; text-align: right; padding-right: 5px; font-size: 16px; font-family: "Courier New", "Courier", monospace; }
+p.form_span textarea { border: 2px solid #4471d1; width: 375px; text-align: left; padding-right: 5px; font-size: 16px; font-family: "Courier New", "Courier", monospace; }
+span.car_data { text-align: right; font-size: 16px; font-family: "Courier New", "Courier", monospace; font-weight: bold; color: #000; }
+p.show_left { margin: 0 10px 0 0; padding: .5em 0; padding-right: 10px; float: left; clear: both; width: 125px; }
+p.show_right { padding: .5em 0; margin: 0; float: left; width: 150px; }
+p.show_span { margin: 0 10px 0 0; padding: .5em 0; padding-right: 10px; float: left; clear: both; width: 295px; }
+.formError { color: #FD3939; }
+.fieldError { background-color: #FD3939; }
+p.left { text-align: left; float: left; }

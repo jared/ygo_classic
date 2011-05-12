@@ -1,0 +1,36 @@
+<p class="home_blurb">
+	Is your glove box full of oil change and car repair receipts?
+</p>
+<p class="home_blurb">
+	Your Garage Online can help you manage everything from your vehicle's routine maintenance to those major and minor repairs.
+</p>
+
+<p class="left">
+	<%= image_tag("repairs_home_floor.jpg", :alt => "Repair Preview", :size => '432x360') %>
+</p>
+<ul id="features">
+	<li id="cars">
+		<%= image_tag("icons/car_48_label.png", :size => '48x64', :alt => "Cars") %>
+		<p>
+			Manage up to three vehicles in your virtual garage.  Store private data, such as VIN or license info, for 
+			easy access online.
+		</p>
+	</li>
+
+	<li id="repairs">
+		<%= image_tag("icons/wrench_48_label.png", :size => '48x64', :alt => "Repairs") %>
+		<p>
+			Never struggle to remember the last time a repair was performed, with searchable repair forms.
+		</p>
+	</li>
+
+	<li id="profile">
+		<%= image_tag("icons/user_48_label.png", :size => '48x64', :alt => "Profile") %>
+		<p>
+			Your online profile allows you to display your vehicle in our virtual showroom.
+		</p>
+	</li>
+</ul>
+<p class="home_blurb">  Staying informed of your vehicle's service history will help you take better care of your worst investment.<br />
+	<%= link_to 'Sign up now!', new_user_path %>
+</p>

@@ -1,0 +1,57 @@
+<div id="required_fields">
+	<h2>Vehicle Description</h2>
+	<p class="show_left">
+		Year<br />
+		<span class="car_data"><%=h @car.year %></span>
+	</p>
+	
+	<p class="show_right">
+		Make<br />
+		<span class="car_data"><%=h @car.make %></span>
+	</p>
+	
+	<p class="show_left">
+		Color<br />
+		<span class="car_data"><%=h @car.color %></span>
+	</p>
+	
+	<p class="show_right">
+		Model<br />
+		<span class="car_data"><%=h @car.model %></span>
+	</p>
+	<br />
+</div> <!-- end required_fields div -->
+
+<div id="optional_fields">
+	<h2>Optional Information</h2>
+	<p class="show_left">
+		Reg. State<br />
+		<span class="car_data"><%=h @car.registration_state %></span>
+	</p>
+	
+	<p class="show_right">
+		License Plate<br />
+		<span class="car_data"><%=h @car.license_plate %></span>
+	</p>
+	
+	<p class="show_span">
+		VIN<br />
+		<span class="car_data"><%=h @car.vehicle_identification_number %></span>
+	</p>
+	
+	<p class="show_span">
+		Notes<br />
+		<span class="car_data"><%=h @car.notes %></span>
+	</p>
+	<% if @car.private? -%>
+		<p class="show_span">This car is private.</p>
+	<% end -%>
+	<br />
+</div> <!-- end optional_fields div -->
+
+<p class="left">
+	<%= link_to image_tag('buttons/work_orders/repairs.gif', :alt => "Repairs", :size => '91x32'), car_work_orders_path(@car) %> 	
+</p>
+<p class="right">
+	<%= link_to image_tag('buttons/cars/edit.gif', :alt => "Edit", :size => '67x32'), edit_car_path(@car) %> 
+</p>

@@ -1,0 +1,53 @@
+<h3>Vehicle Registration</h3>
+<table>
+	<thead>
+		<tr>
+			<th class="year">Year</th>
+			<th class="make">Make</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><%=h car.year %></td>
+			<td><%=h car.make %></td>
+		</tr>
+	</tbody>
+</table>
+<table>
+	<thead>
+		<tr>
+			<th class="model">Model</th>
+			<th class="color">Color</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><%=h car.model %></td>
+			<td><%=h car.color %></td>
+		</tr>
+	</tbody>
+</table>
+<table>
+	<thead>
+		<tr>
+			<th class="model">Service History</th>
+			<th class="color">Repair Cost</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><%= pluralize(car.work_orders.size, 'repair') %></td>
+			<td><%= number_to_currency car.work_orders.sum(:total_cost) %></td>
+		</tr>
+	</tbody>
+</table>
+
+<% unless car.new_record? %>
+	<p id="car_actions">
+		<%= link_to image_tag('buttons/cars/details.gif', :alt => "Details", :size => '87x32'), car_path(car) %><br />
+		<%= link_to image_tag('buttons/work_orders/repairs.gif', :alt => "Repairs", :size => '91x32'), car_work_orders_path(car) %><br />
+		<%= link_to image_tag('buttons/remove.gif', :alt => "Remove", :size => '94x32'), car_path(car), :method => :delete, :confirm => "Really delete this car?" %>
+	</p>
+<% end %>
+
+

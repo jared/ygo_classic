@@ -1,0 +1,6 @@
+<div id="footer">
+	<p>
+		<%= link_to 'About', about_url %> | <%= link_to 'Terms of Service', tos_url %> | <%= link_to 'Privacy Policy', privacy_url %> <% if logged_in? %>| <%= link_to 'Logout', session_path, :method => :delete %> <% end %><br />
+		Your Garage Online is a service of <%= link_to "Alloy Code", "http://www.alloycode.com/" %>.
+	</p>
+</div>

@@ -1,0 +1,20 @@
+<% remote_form_for :line_item, :url => work_order_line_items_path(@work_order), :html => { :id => 'line_item_form'}, :loading => "Element.show('spinner');", :complete => "Element.hide('spinner');" do |f| %>
+<fieldset>
+	<legend>Add Line Item</legend>
+	<table>
+		<thead>
+			<tr>
+				<th class="line_item_description"><label for="line_item_description">Add Service Item</label></th>
+				<th class="line_item_action">&nbsp;</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="line_item_description"><%= f.text_field :description -%></td>
+				<td class="line_item_action"><%= image_submit_tag "icons/add.gif" %></td>
+			</tr>
+		</tbody>
+	</table>
+</fieldset>
+
+<% end %>

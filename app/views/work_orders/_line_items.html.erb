@@ -1,0 +1,13 @@
+<table class="work_orders">
+	<thead>
+		<tr>
+			<th class="line_item_description">Service Performed</th>
+			<th class="line_item_action">&nbsp;</th>
+		</tr>
+	</thead>
+	<tbody id="line_items">
+		<% @work_order.line_items.each do |item| %>
+			<%= render :partial => "/line_items/line_item", :locals => { :line_item => item } %>
+		<% end %>							
+	</tbody>
+</table>

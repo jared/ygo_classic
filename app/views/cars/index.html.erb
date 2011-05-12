@@ -1,0 +1,17 @@
+<% title "Your Garage Online &raquo; My Garage" %>
+
+<ul class="cards">
+	<% 0.upto(2) do |num| %>
+		<li class="registration_card">
+			<% if @cars[num].nil? %>
+			<%= render :partial => "card", :locals => { :car => Car.new(:make => "-", :model => "-") } %>
+			<div class="new_car_overlay">
+				<%= link_to 'Add a Car', new_car_path %>
+			</div>
+			<% else %>
+				<%= render :partial => "card", :locals => { :car => @cars[num] } %>
+			<% end %>
+		</li>
+	<% end %>
+</ul>
+<br class="clear" />

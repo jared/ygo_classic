@@ -1,0 +1,63 @@
+<% title "Your Garage Online &raquo; Repairs for #{@car.name}" %>
+
+<div id="form_header">
+
+	<div id="form_header_vehicle">
+		<div id="form_header_logo">
+			<%= image_tag('icons/tools-mono.gif', :alt => "Tools", :size => '96x96') %>
+		</div>
+		<h2><%= @car.name %></h2>
+	</div>
+
+	<div id="form_header_shop">
+		<dl>
+			<dt>Date:</dt>
+			<dd class="data"><%= Date.today.to_s(:short_date) %></dd>
+			
+			<dt>Mileage:</dt>
+			<dd class="data"><%= number_with_delimiter(@car.work_orders.maximum(:mileage)) %></dd>
+
+
+			<dt>Cost:</dt>
+			<dd class="data"><%= number_to_currency(@car.work_orders.sum(:total_cost)) %></dd>
+		</dl>
+	</div>
+	<br class="clear" />
+</div>
+
+<div class="form_body">
+	<% if @work_orders.empty? -%>
+		<%= image_tag("repairs_blank_slate.jpg", :size => "697x164", :alt => "Create a detailed service record.") %>
+	<% else -%>
+		<% form_tag car_work_orders_path(@car), :method => :get, :id => 'repair_form'  do -%>
+			<p>
+				<label for="query">Quick Search:</label> <%= text_field_tag :query, nil, :class => "query" %><br />
+				<span class="help">(Type in the name or partial name of a repair to find all matching work orders.)</span><br />
+			</p>
+		<% end -%>
+		<%= observe_field :query, :url => car_work_orders_path(@car), 
+															:method => :get, 
+															:frequency => 2, 
+															:with => "'query=' + escape(value)", 
+															:loading => "Element.show('spinner');", 
+															:complete => "Element.hide('spinner');" -%>
+
+		<table class="work_orders">
+			<thead>
+			  <tr>
+			    <th>Date</th>
+			    <th>Mileage</th>
+			    <th>Facility/Location</th>
+					<th>Cost</th>
+					<th />
+			  </tr>			
+			</thead>
+			<tbody id="results">
+				<%= render :partial => "work_order", :collection => @work_orders %>
+			</tbody>
+		</table>
+	<% end %>
+	<p class="right">
+		<%= link_to image_tag("buttons/work_orders/new.gif", :alt => "New", :size => '72x32'), new_car_work_order_path(@car) %>
+	</p>
+</div>

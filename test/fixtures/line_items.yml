@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+boogedy_service_1_line_item_1:
+  id: 1
+  work_order_id: 1
+  description: "Rotate Tires"
+boogedy_service_1_line_item_2:
+  id: 2
+  work_order_id: 1
+  description: "Change Air Filter"

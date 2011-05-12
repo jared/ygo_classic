@@ -1,0 +1,7 @@
+<tr>
+  <td><%=h work_order.date.to_s(:short_date) %></td>
+  <td><%= pluralize(number_with_delimiter(work_order.mileage), 'mile') %></td>
+  <td title="<%=h work_order.shop %>"><%= truncate(h(work_order.shop)) %></td>
+	<td><%= number_to_currency(work_order.total_cost) %></td>
+	<td><%= link_to 'View', car_work_order_path(@car, work_order) %></td>
+</tr>

@@ -1,0 +1,5 @@
+ul#features { float: right; margin: 1em 3em 1em 1em; width: 300px; }
+#features li { list-style-type: none; width: 245px; height: 100px; padding: .5em; margin: 1em; }
+#features li img { float: left; padding: 0 1em 0 0; }
+#features li p { padding: 0; margin: 0; color: #fff; font: 12px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; line-height: 16px; }
+p.home_blurb { clear: both; text-align: center; font: 18px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif; line-height: 24px; width: 600px; margin: 0 auto .5em; }

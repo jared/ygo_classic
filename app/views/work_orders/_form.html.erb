@@ -1,0 +1,33 @@
+<div id="form_header">
+
+	<div id="form_header_vehicle">
+		<div id="form_header_logo">
+			<%= image_tag('icons/tools-mono.gif', :alt => "Tools", :size => '96x96') %>
+		</div>
+		<h2><%= @car.name %></h2>
+		<div id="work_order_notice">&nbsp;</div>
+	</div> <!-- end form_header_vehicle div -->
+
+	<div id="form_header_shop">
+		<dl>
+			<dt><label for="work_order_date">Date:</label></dt>
+			<dd><%= f.text_field :date, :size => 15, :class => 'form_data' %><%= popup_calendar_tag('work_order_date', :format => "date") %></dd>
+		
+			<dt><label for="work_order_mileage">Mileage:</label></dt>
+			<dd><%= f.text_field :mileage, :size => 15, :class => 'form_data' %></dd>
+
+			<dt><label for="work_order_total_cost">Cost:</label></dt>
+			<dd><%= f.text_field :total_cost, :size => 15, :class => 'form_data' %></dd>
+		</dl>
+	</div> <!-- end form_header_shop div -->
+	<br class="clear" />
+</div> <!-- end form_header div -->
+
+<p>
+	<label for="work_order_facility">Facility:</label>
+	<%= text_field_with_auto_complete :work_order, :shop, :size => 50, :class => 'form_data' %>
+</p>
+<p>
+	<label for="work_order_notes">Notes:</label><br />
+	<%= f.text_area :notes, :rows => 4, :class => 'form_data' %>
+</p>

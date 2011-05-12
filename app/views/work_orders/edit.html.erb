@@ -1,0 +1,19 @@
+<% title "Your Garage Online &raquo; #{@car.name}" %>
+
+<% form_for :work_order, :url => car_work_order_path(@car, @work_order), :html => { :id => 'repair_form', :method => :put} do |f| %>
+	<%= render :partial => "form", :locals => { :f => f } %>
+<% end %>
+<%= observe_form :repair_form, :url => car_work_order_path(@car, @work_order), 
+															 :method => :put, 
+															 :update => {},
+															 :frequency => 5,
+															 :loading => "Element.show('spinner');", 
+															 :complete => "Element.hide('spinner');" %>
+<div id="form_body">
+
+	<%= render :partial => "new_line_item" %>
+
+	<%= render :partial => "line_items" %>
+
+	<p class="right"><%= link_to image_tag("buttons/work_orders/finished.gif", :alt => "Finished", :size => '97x32'), car_work_orders_path(@car), :method => :get %></p>
+</div> <!-- end form_body div -->

@@ -1,0 +1,16 @@
+#information { width: 700px; margin: 0px auto; padding: 0 1em; font-family: Georgia, "Times New Roman", Times, serif; line-height: 200%; }
+#information h1 { background: #333 url(/images/user_form_corners/upper-left.jpg) no-repeat left top; color: #eee; margin-top: 0; padding: .5em; }
+#information h3, #information h4 { font-size: 120%; color: #fff; padding: .25em 1em; }
+#information p { color: #ddd; padding-left: 1em; text-indent: 1em; line-height: 200%; }
+#information ul { font: normal 14px "Lucida Grande", Lucida, Verdana, sans-serif; line-height: 150%; padding: 0 1em; margin: 0 1em; }
+#information dl { padding-left: 2em; }
+#information dt { color: #fff; font-weight: bold; }
+#information dd { margin-left: 1.5em; }
+#information p.message { font-size: 13px; font-style: italic; }
+
+ul.about { list-style-type: none; text-align: center; }
+ul.about li { padding: 1em; }
+
+span.right { font-size: 12px; font-style: italic; float: right; clear: none; margin: 0; }
+.important { color: #fc0; }
+.white { color: #fff; }

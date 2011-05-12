@@ -1,0 +1,27 @@
+boogedy:
+  id: 1
+  make: "Chevrolet"
+  model: "Caprice"
+  year: 1995
+  color: "Dark Gray/Green Metallic"
+  notes: "An old Virginia State Police cruiser."
+  user_id: 1
+  private: false
+yaffa:
+  id: 2
+  make: "Dodge"
+  model: "Neon"
+  year: 1995
+  color: "White"
+  notes: "Nancy's first car."
+  user_id: 2
+  private: false
+impala:
+  id: 3
+  make: "Chevrolet"
+  model: "Impala"
+  year: 1967
+  color: "Black"
+  notes: "The Metallicar"
+  user_id: 3
+  private: true
